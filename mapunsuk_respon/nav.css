@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* วางบนสุดของ nav.css */
+* {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0%;
+    font-family: "Inter", sans-serif;
+}
+
+nav {
+    background-color: #58a7df;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.content1 {
+    max-width: 1100px;
+    width: 100%;
+    padding: 0rem 1rem;
+    background-color: #58a7df;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    gap: 350px;
+    border-style: solid;
+    border-color: #4d90c0;
+}
+
+.button1 {
+    height: 30px;
+    width: 90px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.button>.b1 {
+    width: 140px;
+    height: 30px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+a>.b1 {
+    width: 140px;
+    height: 30px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.hamburger {
+    display: none;
+    /* ซ่อน hamburger บนจอใหญ่ */
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.imagetitle {
+    width: 80px;
+    height: 60px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* ===== Mobile < 768px ===== */
+@media (max-width: 767.98px) {
+
+    /* สูงบาร์บนมือถือให้พอดี และจัดกึ่งกลางแนวตั้ง */
+    .title h1 {
+        font-size: 24px;
+        line-height: 1;
+        /* ช่วยให้กึ่งกลางแนวตั้งพอดี */
+        margin: 0;
+        font-weight: 800;
+        /* ให้หนาตามดีไซน์ */
+        letter-spacing: 0.3px;
+    }
+
+    nav {
+        height: 56px;
+    }
+
+    /* คอนเทนเนอร์แถบฟ้า */
+    .content1 {
+        height: 56px;
+        /* ให้แถวบนสูงเท่าบาร์ */
+        display: flex;
+        max-width: 100vw;
+        align-items: center;
+
+        /* ไม่ให้กว้างเกิน viewport */
+        width: 100%;
+        padding: 0 16px !important;
+        gap: 10px !important;
+        /* ลดจาก 350px */
+        justify-content: space-between;
+        /* แทนการใช่ gap ใหญ่ */
+        border-width: 0;
+        /* กันเผื่อขอบดันเกินจอ */
+        box-sizing: border-box;
+    }
+
+    /* โลโก้เล็กลงบนมือถือ */
+    .imagetitle {
+        width: 60px;
+        height: 50px;
+    }
+
+    /* ซ่อนปุ่ม 3 ปุ่มตามที่ตั้งไว้ */
+    .button {
+        display: none;
+    }
+
+    .hamburger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 36px;
+        height: 36px;
+
+        /* สีพื้นปุ่มฟ้า + เส้นขอบขาวโปร่งเล็กน้อย */
+        background-color: #6cb0de;
+        border: 0px solid rgba(255, 255, 255, 0.7);
+
+
+        /* ให้เนื้อหากึ่งกลาง (แม้จะไม่มีเนื้อหาในปุ่ม) */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+
+        /* นุ่มนวลเวลา hover/active */
+        transition: background-color 0.15s ease, box-shadow 0.15s ease,
+            transform 0.15s ease, border-color 0.15s ease;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    /* วาด "สามขีด" สีขาวด้วย pseudo-element เดียว + เงาเป็น 3 เส้น */
+    .hamburger::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 18px;
+        height: 2px;
+        background: #fff;
+        border-radius: 1px;
+        transform: translate(-50%, -50%);
+        /* ทำเส้นบน/ล่างด้วย box-shadow */
+        box-shadow: 0 -6px 0 #fff, 0 6px 0 #fff;
+    }
+
+    /* เอฟเฟกต์ hover ให้สว่างขึ้นเล็กน้อย */
+    .hamburger:hover {
+        background: #79b9e4;
+        /* ฟ้าสว่างขึ้นนิด */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+        transform: translateY(-1px);
+    }
+
+    /* ขณะกด */
+    .hamburger:active {
+        transform: translateY(0);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    /* รองรับคีย์บอร์ด/การเข้าถึง */
+    .hamburger:focus-visible {
+        outline: 2px dashed #ffffff;
+        outline-offset: 2px;
+    }
+
+    .button {
+        display: none;
+    }
+}
