@@ -9,7 +9,6 @@ main {
     display: flex;
     justify-content: center;
     padding: 0 2rem;
-    background-color: #c4c4c4;
 }
 
 .content {
