@@ -29,6 +29,14 @@ main {
     margin-top: 20px;
 }
 
+.layer1>img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 .layer2 .line {
     border: none;
     height: 2px;
@@ -51,6 +59,7 @@ main {
     align-items: center;
     padding: 30px;
     padding-bottom: 10px;
+    display: flex;
 }
 
 
@@ -79,22 +88,7 @@ main {
     border-color: #007bff;
 }
 
-.search-button {
-    display: inline-flex;
-    justify-content: center;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    background-color: #E6E6E6;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-.search-button:hover {
-    background-color: #0056b3;
-}
 
 .selectbutton {
     display: flex;
@@ -114,20 +108,22 @@ main {
     padding: 8px 14px;
 }
 
-.showactivity {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 20px;
-    padding: 0px 60px 0px 60px;
-    justify-content: space-around;
+.showactivity{
+  display: grid;
+  grid-template-columns: repeat(3, 300px); /* สูงสุด 3 คอลัมน์ */
+  grid-auto-rows: auto;
+  gap: 20px;
+  padding: 0 60px;
+  justify-content: start;                 /* ชิดซ้ายเสมอ (ลบ space-around เดิม) */
 }
 
-.activity {
-    width: 300px;
-    height: 400px;
-    background-color: #f1f1f2;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+/* card เดิมกว้าง 300px พอดีกับคอลัมน์ */
+.activity{
+  width: 300px;
+  height: 400px;
+  background-color: #f1f1f2;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,.05);
 }
 
 .activity>img {
@@ -136,8 +132,7 @@ main {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
 
-.activity>h4,
-p {
+.activity>h4, .activity >p {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -150,14 +145,6 @@ p {
     margin-right: 10px;
 }
 
-.activity>div>button {
-    height: 30px;
-    width: 90px;
-    border-radius: 5px;
-    border-style: none;
-    background-color: #4FBE27;
-    color: #fff;
-}
 
 .swiper-button {
     display: flex;
@@ -195,9 +182,12 @@ svg {
     align-items: center;
 }
 
+/* รีทำเอฟเฟกต์กดให้เฉพาะปุ่มทั่วไป (ไม่รวมปุ่มสไลด์) */
+
 
 /* แท็บเล็ต: เหลือ 2 คอลัมน์ */
 @media (max-width: 1024px) {
+
     main {
         background: #fff;
         padding: 0;
@@ -239,6 +229,7 @@ svg {
 
 }
 
+
 @media (max-width: 767.98px) {
     .selectbutton {
         display: flex;
@@ -251,15 +242,6 @@ svg {
 
 
     }
-
-    .button2 {
-        height: 30px;
-        border-radius: 5px;
-        border-style: none;
-        background-color: #E6E6E6;
-        /* padding: 8px 14px; */
-    }
-
 
     .search-container {
         flex-direction: column;
