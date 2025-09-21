@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0%;
+    font-family: "Inter", sans-serif;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem; 
+  background-color: #c4c4c4;
+}
+
+.content-1{
+  max-width: 1100px; 
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  height: auto;
+}
+
+.layer-1{
+     padding-left: 100px;
+     display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+
+.layer-2 > table{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+table {
+      width: 90%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-left: 50px;
+    }
+
+    th, td {
+      padding: 16px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #0078D4;
+      color: white;
+    }
+
+    td.status {
+      color: #0078D4;
+      font-weight: bold;
+    }
+
+    .cancel-btn {
+      background-color: #d32f2f;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .cancel-btn:hover {
+      background-color: #b71c1c;
+    }
+
+    .headtable{
+      background-color: white;
+      color: #2280EB;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+
