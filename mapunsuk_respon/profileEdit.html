@@ -5,77 +5,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapunsuk</title>
+    <link rel="stylesheet" href="css/profileEdit.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/register.css">
-    <link rel="stylesheet" href="css/style_global.css" />
+    <link rel="stylesheet" href="css/style_global.css">
 </head>
 
 <body>
     <nav>
-        <div class="content1">
+        <div class="content1" id="navBar">
             <div class="title">
-                <img class="imagetitle" src="https://s.imgz.io/2025/09/08/download-1f4108ab663ec19eb.png" alt="logo" />
-                <a href="index.html">
+                <img class="imagetitle" src="https://s.imgz.io/2025/09/08/download-1f4108ab663ec19eb.png" alt="logo">
+                <a href="indexuser.html">
                     <h1>MAPUNSUK</h1>
                 </a>
             </div>
-            <!-- เพิ่ม hamburger -->
+
             <button class="hamburger" type="button" aria-label="เปิดเมนู" aria-expanded="false"
                 aria-controls="nav-actions"></button>
-            <div class="button">
-                <a href="login.html" class="btn bg_yellow">เพิ่มกิจกรรมจิตอาสา</a>
-                <a href="register.html" class="btn bg_white">สมัครสมาชิกเป็นอาสา</a>
-                <a href="login.html" class="btn bg_blue">เข้าสู่ระบบ</button></a>
+
+            <div class="button" id="nav-actions">
+                <a href="managepost.html" class="btn bg_yellow">เพิ่มกิจกรรมจิตอาสา</a>
+
+                <!-- แจ้งเตือน -->
+                <div class="dropdown" id="noticeDropdown">
+                    <svg class="bell" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="menu-notice" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 64 64" fill="white">
+                        <path
+                            d="M32 58c3.3 0 6-2.7 6-6H26c0 3.3 2.7 6 6 6zM52 46H12c-1.1 0-2-.9-2-2s.9-2 2-2h2V26c0-8.8 6-16.2 14-18v-2c0-2.2 1.8-4 4-4s4 1.8 4 4v2c8 1.8 14 9.2 14 18v16h2c1.1 0 2 .9 2 2s-.9 2-2 2z" />
+                        <path d="M54 26l6 8 6-8z" />
+                    </svg>
+                    <div class="dropdown-content1" id="menu-notice">
+                        <h2 class="head">การแจ้งเตือน</h2>
+                        <hr>
+                        <a href="#">09/พ.ย/2568 ยินดีต้อนรับสมาชิกใหม่</a>
+                    </div>
+                </div>
+
+                <!-- โปรไฟล์ -->
+                <div class="dropdown" id="profileDropdown">
+                    <svg class="profile-btn" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="menu-profile" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                        viewBox="0 -8 64 64" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="24" cy="24" r="20" />
+                        <circle cx="24" cy="18" r="6" />
+                        <path d="M12 36c0-6 24-6 24 0" />
+                        <path d="M50 28l6 6 6-6" />
+                    </svg>
+                    <div class="dropdown-content" id="menu-profile">
+                        <p>ชื่อผู้ใช้: นาย นภัทร แสงวัง</p>
+                        <a href="profileEdit.html">แก้ไขข้อมูลส่วนตัว</a>
+                        <a href="history_join.html">จิตอาสาที่จะเข้าร่วม</a>
+                        <a href="history_join.html">ประวัติจิตอาสา</a>
+                        <a href="index.html" class="logout">ออกจากระบบ</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
     <main>
         <div class="content">
-            <div class="register">
-                <div>
-                    <h1 class="title">สมัครสมาชิกเป็นจิตอาสา</h1>
-                </div>
-                <div>
-                    <form action="">
-                        <div class="name">
-                            <label for="fname"></label>
-                            <input type="text" id="fname" name="firstname" placeholder="ชื่อ">
-                            <label for="lname"></label>
-                            <input type="text" id="lname" name="lastname" placeholder="นามสกุล">
-                        </div>
-                        <div class="gender">
-                            <p>เพศ:</p>
-                            <input type="radio" id="male" name="gender" value="MALE">
-                            <label for="male">ชาย</label>
-                            <input type="radio" id="female" name="gender" value="FEMALE">
-                            <label for="female">หญิง</label>
-                        </div>
-                        <div class="email">
-                            <input type="email" name="email" id="email" placeholder="อีเมล">
-                        </div>
-                        <div class="password">
-                            <input type="password" name="password" id="password" placeholder="รหัสผ่าน">
-                        </div>
-                        <div class="password">
-                            <input type="password" name="password" id="password" placeholder="ยืนยันรหัสผ่าน">
-                        </div>
-                        <div class="tel">
-                            <input type="tel" name="tel" id="tel" placeholder="เบอร์โทรติดต่อ">
-                        </div>
-                        <div class="submit">
-                            <button class="btn bg_yellow" type="submit">สมัครสมาชิก</button>
-                        </div>
-                        <div class="login">
-                            <h5>เป็นสมาชิกแล้ว?</h5>
-                            <h5 id="login"><a href="login.html">เข้าสู่ระบบ</a></h5>
-                        </div>
-                    </form>
-                </div>
+            <div class="edit">
+
+                <form class="profile-form" action="">
+                    <!-- รูปโปรไฟล์อยู่ในฟอร์มแล้ว และคลิกได้ -->
+                    <div class="pic" id="avatar" role="button" tabindex="0" aria-label="เปลี่ยนรูปโปรไฟล์">
+                        <img id="avatarImg"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHXi6kWCo1P3qJAuOnEAs6jWS1Dg1BqRkk8Q&s"
+                            alt="รูปโปรไฟล์">
+                    </div>
+                    <input type="hidden" name="avatarUrl" id="avatarUrlHidden">
+                    <div>
+                        <h1 class="title">แก้ไขข้อมูลส่วนตัว</h1>
+                    </div>
+
+                    <div class="name">
+                        <label for="fname"></label>
+                        <input type="text" id="fname" name="firstname" placeholder="ชื่อ">
+                        <label for="lname"></label>
+                        <input type="text" id="lname" name="lastname" placeholder="นามสกุล">
+                    </div>
+
+                    <div class="gender">
+                        <p>เพศ:</p>
+                        <input type="radio" id="male" name="gender" value="MALE">
+                        <label for="male">ชาย</label>
+                        <input type="radio" id="female" name="gender" value="FEMALE">
+                        <label for="female">หญิง</label>
+                    </div>
+
+                    <div class="email"><input type="email" name="email" id="email" placeholder="อีเมล" disabled></div>
+                    <div class="password"><input type="password" name="password" id="password" placeholder="รหัสผ่าน"
+                            disabled></div>
+                    <div class="tel"><input type="tel" name="tel" id="tel" placeholder="เบอร์โทรติดต่อ"></div>
+
+                    <div class="submit">
+                        <button class="btn bg_yellow" type="submit">บันทึกการแก้ไข</button>
+                    </div>
+                </form>
+
             </div>
         </div>
     </main>
+    <!-- Overlay สำหรับใส่ URL รูปใหม่ -->
+    <div class="avatar-overlay" id="avatarOverlay" hidden>
+        <div class="avatar-modal" role="dialog" aria-modal="true" aria-labelledby="avatarTitle">
+            <h3 id="avatarTitle">เปลี่ยนรูปโปรไฟล์</h3>
+            <p class="avatar-hint">วางลิงก์รูปภาพ (URL) แล้วกดยืนยัน</p>
+
+            <img id="avatarPreview" alt="ตัวอย่างรูป" />
+
+            <div class="avatar-input">
+                <input type="url" id="avatarUrl" placeholder="https://example.com/photo.jpg" inputmode="url" />
+            </div>
+
+            <p class="avatar-error" id="avatarError" aria-live="polite"></p>
+
+            <div class="avatar-actions">
+                <button type="button" class="btn btn--white" id="avatarCancel">ยกเลิก</button>
+                <button type="button" class="btn bg_blue" id="avatarConfirm">ยืนยัน</button>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="content2">
@@ -105,8 +159,9 @@
             </div>
         </div>
     </footer>
+    <script src="js/profileEdit.js"></script>
     <script src="js/nav.js"></script>
-
+    <script src="js/index.js"></script>
 </body>
 
 </html>

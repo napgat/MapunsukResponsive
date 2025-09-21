@@ -171,14 +171,6 @@ main {
     background-color: #a6a6a8;
 }
 
-svg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-    width: 70px;
-}
-
 /* .slidepage>h2 {
     display: flex;
     justify-content: center;
@@ -186,8 +178,6 @@ svg {
 } */
 
 /* รีทำเอฟเฟกต์กดให้เฉพาะปุ่มทั่วไป (ไม่รวมปุ่มสไลด์) */
-
-
 
 
 /* ===== Slider bar (pager) ===== */

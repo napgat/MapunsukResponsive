@@ -16,6 +16,13 @@ nav {
     justify-content: center;
     z-index: 50;
 }
+svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+}
 
 
 .content1 {
@@ -88,7 +95,6 @@ nav {
 
 .dropdown-content {
     display: none;
-    /* ซ่อนเมนูไว้ก่อน */
     position: absolute;
     right: 0;
     background-color: #fff;
@@ -99,10 +105,15 @@ nav {
     overflow: hidden;
 }
 
-.dropdown-content a {
+.dropdown-content a{
     color: black;
     padding: 10px 15px;
     text-decoration: none;
+    display: block;
+}
+.dropdown-content p{
+    background: #FdFdfd;
+    padding: 10px 15px;
     display: block;
 }
 

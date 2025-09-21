@@ -1,45 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*{
-    margin: 0%;
-    font-family: "Inter", sans-serif;
+* {
+  margin: 0%;
+  font-family: "Inter", sans-serif;
 }
 
-main{
+main {
   display: flex;
   justify-content: center;
-  padding: 0 2rem; 
+  padding: 0 2rem;
   background-color: #c4c4c4;
 }
 
-.content{
-  max-width: 1100px; 
+.content {
+  max-width: 1100px;
   width: 100%;
   padding: 2rem 1rem;
   background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.login{
-    width: 500px;
-    height: 400px;
-    margin: 73px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+.login {
+  width: 500px;
+  height: 400px;
+  margin: 73px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
-.login > div > .title{
-    color: #1E7CE8; 
-    font-weight: 500;
-    text-align: center;
-    padding: 50px;
+.login>div>.title {
+  color: #1E7CE8;
+  font-weight: 500;
+  text-align: center;
+  padding: 50px;
 }
 
-input[type=email],input[type=password],button[type=submit]{
+input[type=email],
+input[type=password],
+button[type=submit] {
   width: 80%;
   padding: 12px;
   margin: 0px;
@@ -48,45 +50,57 @@ input[type=email],input[type=password],button[type=submit]{
   border-radius: 2px;
   box-sizing: border-box;
 }
-form > .email,.password,.submit{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+
+form>.email,
+.password,
+.submit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
-form > .submit{
-    margin-top: 40px;
+form>.submit {
+  margin-top: 40px;
 }
 
-form > .email > input,.password > input{
+form>.email>input,
+.password>input {
   border-radius: 4px;
 }
 
-.submit>button{
+.submit>button {
   background-color: #FFCB1F;
   border-radius: 5px;
   border-style: none;
 }
 
-.register{
+.register {
   display: flex;
   justify-content: center;
 }
-.register > h5{
+
+.register>h5 {
   font-weight: 300;
 }
-.register > #register,a{
+
+.register>#register,
+a {
   color: #58A7DF;
 }
 
 @media (max-width: 1024px) {
-
-    main {
-        background: #fff;
-        padding: 0;
-    }
-    .login{
-      margin: 0;
-    }
-
+  main {
+    background: #fff;
+    padding: 0;
   }
+
+
+  .login {
+    margin: 0;
+  }
+}
+@media (max-width: 769px) {
+  .content{
+    padding: 0px;
+  }
+}
