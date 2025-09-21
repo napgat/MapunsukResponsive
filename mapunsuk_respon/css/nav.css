@@ -20,9 +20,11 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    height: 40px;
     width: 70px;
+    cursor: pointer;
 }
+
 
 
 .content1 {
@@ -58,7 +60,7 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     /* white-space: nowrap; */
 }
 
@@ -128,6 +130,40 @@ svg {
 .show {
     display: block;
 }
+/* avatar button (แทน SVG) */
+.avatar-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:transparent;
+  border:0;
+  /* padding:0; */
+  margin-left: 10px;
+  cursor:pointer;
+}
+
+.avatar-btn:focus-visible{
+  outline:2px solid #fff;
+  outline-offset:2px;
+  border-radius:6px;
+}
+
+.avatar-img{
+  width:36px;   
+  height:36px;
+  border-radius:50%;
+  border:3px solid #fff;   /* กรอบขาว */
+  object-fit:cover;
+  display:block;
+}
+
+/* ลูกศรเล็กขวา (caret) */
+.caret{
+  width:0; height:0;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-top:8px solid #fff; /* สีขาว */
+}
 
 
 /* bell */
@@ -140,7 +176,6 @@ svg {
 
 .dropdown-content1 {
     display: none;
-    /* ซ่อนเมนูแจ้งเตือนก่อน */
     position: absolute;
     right: 0;
     background-color: #fff;
@@ -178,6 +213,7 @@ svg {
 
 /* ===== Mobile < 768px ===== */
 @media (max-width: 769px) {
+    .avatar-img{ width:40px; height:40px; }
 
     .dropdown>.dropdown-content,
     .dropdown>.dropdown-content1 {

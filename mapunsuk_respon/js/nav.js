@@ -35,7 +35,7 @@
     return dd?.querySelector('.dropdown-content, .dropdown-content1');
   }
   function setExpanded(dd, expanded){
-    const btn = dd?.querySelector('svg[aria-haspopup="true"]');
+    const btn = dd?.querySelector('[aria-haspopup="true"]');
     btn?.setAttribute('aria-expanded', String(expanded));
   }
   function closeAll(){
