@@ -3,3 +3,4 @@
 1.navbar / <br>
 2.footer / <br>
 3.index / <br>
+4.silder page ในหน้า index / <br>
