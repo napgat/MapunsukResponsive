@@ -16,6 +16,7 @@ nav {
     justify-content: center;
     z-index: 50;
 }
+
 svg {
     display: flex;
     justify-content: center;
@@ -107,13 +108,14 @@ svg {
     overflow: hidden;
 }
 
-.dropdown-content a{
+.dropdown-content a {
     color: black;
     padding: 10px 15px;
     text-decoration: none;
     display: block;
 }
-.dropdown-content p{
+
+.dropdown-content p {
     background: #FdFdfd;
     padding: 10px 15px;
     display: block;
@@ -130,39 +132,52 @@ svg {
 .show {
     display: block;
 }
+
 /* avatar button (แทน SVG) */
-.avatar-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  background:transparent;
-  border:0;
-  /* padding:0; */
-  margin-left: 10px;
-  cursor:pointer;
+.avatar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 0;
+    /* padding:0; */
+    margin-left: 10px;
+    cursor: pointer;
 }
 
-.avatar-btn:focus-visible{
-  outline:2px solid #fff;
-  outline-offset:2px;
-  border-radius:6px;
+.avatar-btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    border-radius: 6px;
 }
 
-.avatar-img{
-  width:36px;   
-  height:36px;
-  border-radius:50%;
-  border:3px solid #fff;   /* กรอบขาว */
-  object-fit:cover;
-  display:block;
+.avatar-img {
+    width: 40px;
+    ;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    /* กรอบขาว */
+    object-fit: cover;
+    display: block;
 }
 
 /* ลูกศรเล็กขวา (caret) */
-.caret{
-  width:0; height:0;
-  border-left:6px solid transparent;
-  border-right:6px solid transparent;
-  border-top:8px solid #fff; /* สีขาว */
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #fff;
+    /* สีขาว */
+}
+
+#profileDropdown [aria-expanded="true"] .caret {
+    border-top-color: transparent;
+    border-bottom: 8px solid #fff;
+    /* พลิกเป็นลูกศรขึ้น */
+    transform: translateY(-6px);
+    /* ⬅️ เลื่อนขึ้นเล็กน้อย */
 }
 
 
@@ -209,11 +224,28 @@ svg {
     display: block;
 }
 
+/* ตั้งค่าพื้นฐานให้ลูกศรใน SVG (ขยาย/ขยับเล็กน้อยเหมือนเดิม) */
+#noticeDropdown .bell path:last-of-type {
+    transform-box: fill-box;
+    /* อ้างอิงกรอบของ path */
+    transform-origin: 50% 50%;
+    transform: translateX(4px) translateY(2px) scale(1.15);
+    /* transition: transform .15s ease; */
+
+}
+
+/* เมื่อ dropdown เปิด -> พลิกลูกศรให้ชี้ขึ้น */
+#noticeDropdown .bell[aria-expanded="true"] path:last-of-type {
+    transform: translateX(4px) translateY(2px) scale(-1.15);
+}
 
 
 /* ===== Mobile < 768px ===== */
 @media (max-width: 769px) {
-    .avatar-img{ width:40px; height:40px; }
+    .avatar-img {
+        width: 40px;
+        height: 40px;
+    }
 
     .dropdown>.dropdown-content,
     .dropdown>.dropdown-content1 {
@@ -232,9 +264,12 @@ svg {
     }
 
     /* ขณะเมนูหลักเปิด (hamburger) ให้ dropdown กินทั้งแถวได้เหมือนกัน */
-    .content1.menu-open .dropdown>.dropdown-content,
     .content1.menu-open .dropdown>.dropdown-content1 {
-        top: calc(56px + 8px);
+        top: calc(160px + 8px);
+    }
+
+    .content1.menu-open .dropdown>.dropdown-content {
+        top: calc(220px + 8px);
     }
 
     .title h1 {

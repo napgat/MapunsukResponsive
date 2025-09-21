@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <nav>
+       <nav>
         <div class="content1" id="navBar">
             <div class="title">
                 <img class="imagetitle" src="https://s.imgz.io/2025/09/08/download-1f4108ab663ec19eb.png" alt="logo">
@@ -29,12 +29,13 @@
 
                 <!-- แจ้งเตือน -->
                 <div class="dropdown" id="noticeDropdown">
-                    <svg class="bell" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false"
-                        aria-controls="menu-notice" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                        viewBox="0 0 64 64" fill="white">
+                    <svg class="bell" role="button" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="menu-notice" xmlns="http://www.w3.org/2000/svg" viewBox="-4 0 68 64"
+                        fill="white">
                         <path
                             d="M32 58c3.3 0 6-2.7 6-6H26c0 3.3 2.7 6 6 6zM52 46H12c-1.1 0-2-.9-2-2s.9-2 2-2h2V26c0-8.8 6-16.2 14-18v-2c0-2.2 1.8-4 4-4s4 1.8 4 4v2c8 1.8 14 9.2 14 18v16h2c1.1 0 2 .9 2 2s-.9 2-2 2z" />
-                        <path d="M54 26l6 8 6-8z" />
+                        <path d="M54 26l6 8 6-8z"
+                            transform="translate(60 28.6667) scale(1.15) translate(-60 -28.6667)" />
                     </svg>
                     <div class="dropdown-content1" id="menu-notice">
                         <h2 class="head">การแจ้งเตือน</h2>
@@ -43,17 +44,15 @@
                     </div>
                 </div>
 
-                <!-- โปรไฟล์ -->
                 <div class="dropdown" id="profileDropdown">
-                    <svg class="profile-btn" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false"
-                        aria-controls="menu-profile" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                        viewBox="0 -8 64 64" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="24" cy="24" r="20" />
-                        <circle cx="24" cy="18" r="6" />
-                        <path d="M12 36c0-6 24-6 24 0" />
-                        <path d="M50 28l6 6 6-6" />
-                    </svg>
+                    <button class="avatar-btn" type="button" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="menu-profile">
+                        <img class="avatar-img"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHXi6kWCo1P3qJAuOnEAs6jWS1Dg1BqRkk8Q&s"
+                            alt="โปรไฟล์" />
+                        <span class="caret" aria-hidden="true"></span>
+                    </button>
+
                     <div class="dropdown-content" id="menu-profile">
                         <p>ชื่อผู้ใช้: นาย นภัทร แสงวัง</p>
                         <a href="profileEdit.html">แก้ไขข้อมูลส่วนตัว</a>
@@ -63,8 +62,8 @@
                     </div>
                 </div>
             </div>
-        </div>
     </nav>
+
 
     <main>
         <div class="content">
