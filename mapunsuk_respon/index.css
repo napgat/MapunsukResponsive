@@ -108,22 +108,24 @@ main {
     padding: 8px 14px;
 }
 
-.showactivity{
-  display: grid;
-  grid-template-columns: repeat(3, 300px); /* สูงสุด 3 คอลัมน์ */
-  grid-auto-rows: auto;
-  gap: 20px;
-  padding: 0 60px;
-  justify-content: start;                 /* ชิดซ้ายเสมอ (ลบ space-around เดิม) */
+.showactivity {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    /* สูงสุด 3 คอลัมน์ */
+    grid-auto-rows: auto;
+    gap: 20px;
+    padding: 0 60px;
+    justify-content: start;
+    /* ชิดซ้ายเสมอ (ลบ space-around เดิม) */
 }
 
 /* card เดิมกว้าง 300px พอดีกับคอลัมน์ */
-.activity{
-  width: 300px;
-  height: 400px;
-  background-color: #f1f1f2;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,.05);
+.activity {
+    width: 300px;
+    height: 400px;
+    background-color: #f1f1f2;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .05);
 }
 
 .activity>img {
@@ -132,7 +134,8 @@ main {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
 
-.activity>h4, .activity >p {
+.activity>h4,
+.activity>p {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -157,12 +160,12 @@ main {
     transition: all 0.5s ease;
 }
 
-.slidepage {
+/* .slidepage {
     display: flex;
     justify-content: center;
     margin-top: 50px;
     gap: 20px;
-}
+} */
 
 .swiper-button:hover {
     background-color: #a6a6a8;
@@ -176,14 +179,62 @@ svg {
     width: 70px;
 }
 
-.slidepage>h2 {
+/* .slidepage>h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* รีทำเอฟเฟกต์กดให้เฉพาะปุ่มทั่วไป (ไม่รวมปุ่มสไลด์) */
 
+
+
+
+/* ===== Slider bar (pager) ===== */
+.sliderbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.sliderbar-track {
+    display: flex;
+    gap: 8px;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 4px;
+    scroll-snap-type: x proximity;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.sliderbar-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* ปุ่มหมายเลขหน้า */
+.slider-pill {
+    flex: 0 0 auto;
+    min-width: 40px;
+    height: 36px;
+    border-radius: 999px;
+    scroll-snap-align: center;
+}
+
+/* หน้า “กำลังเลือก” */
+.slider-pill.is-active {
+    background: var(--brand);
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.sliderbar .swiper-button[data-dir="-1"],
+.sliderbar .swiper-button[data-dir="1"]{
+  font-size: 30px;   /* ปรับได้ตามชอบ */
+  line-height: 1;
+}
 
 /* แท็บเล็ต: เหลือ 2 คอลัมน์ */
 @media (max-width: 1024px) {
@@ -231,6 +282,14 @@ svg {
 
 
 @media (max-width: 767.98px) {
+    .sliderbar {
+        gap: 8px;
+    }
+
+    .slider-pill {
+        min-width: 36px;
+        height: 34px;
+    }
     .selectbutton {
         display: flex;
         flex-wrap: wrap;

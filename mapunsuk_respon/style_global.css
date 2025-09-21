@@ -130,7 +130,7 @@
     color: var(--btn-color);
     background: var(--btn-bg);
     border: 0;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
     user-select: none;
     text-decoration: none;
