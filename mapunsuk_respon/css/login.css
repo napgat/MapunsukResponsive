@@ -78,7 +78,7 @@ form > .email > input,.password > input{
 .register > #register,a{
   color: #58A7DF;
 }
-/* แท็บเล็ต: เหลือ 2 คอลัมน์ */
+
 @media (max-width: 1024px) {
 
     main {

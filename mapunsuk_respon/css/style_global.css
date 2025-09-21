@@ -37,19 +37,20 @@
     --btn-join-active: #3D971D;
 }
 /* Global sticky footer */
-html, body { height: 100%; }
+/* html, body { height: 100%; }
 
 body{
-  min-height: 100dvh;   /* รองรับ mobile browser ใหม่ ๆ */
-  min-height: 100svh;   /* fallback safari บางเวอร์ชัน */
+  min-height: 100dvh;  
+  min-height: 100svh;   
   display: flex;
   flex-direction: column;
 }
 
-main{ flex: 1 0 auto; } /* ดัน main กินพื้นที่ที่เหลือ */
-footer{ margin-top: auto; }  /* ชิดล่างเสมอเมื่อคอนเทนต์สั้น */
+main{ flex: 1 0 auto; }
+footer{ margin-top: auto; }  */
 
 /* ปุ่มเข้าร่วม */
+
 .btn--join,.btn.join {
     background: var(--btn-join);
     color: #fff;
