@@ -110,7 +110,7 @@ main {
 
 .showactivity {
     display: grid;
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
     /* สูงสุด 3 คอลัมน์ */
     grid-auto-rows: auto;
     gap: 20px;
@@ -260,7 +260,7 @@ svg {
     }
 
     .showactivity {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(280px, 1fr));
         gap: 16px;
         padding-left: 0;
         padding-right: 0;
@@ -334,7 +334,7 @@ svg {
 
 
     .showactivity {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; padding: 0 16px;
         gap: 14px;
         padding: 0 16px;
         justify-content: stretch;
