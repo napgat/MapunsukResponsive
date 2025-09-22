@@ -192,6 +192,7 @@ form>.email>input,
 .avatar-overlay[hidden] {
   display: none;
 }
+/* ซ่อน input file */
 
 .avatar-overlay {
   position: fixed;
