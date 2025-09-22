@@ -112,6 +112,7 @@ td {
   display: grid;
   place-items: center;
   z-index: 1000;
+  background: rgba(0,0,0,.45);
 }
 
 .overlay[hidden] {
@@ -125,21 +126,19 @@ td {
   backdrop-filter: blur(1px);
 }
 
-.overlay__panel {
+.overlay__panel{
   position: relative;
   width: min(1100px, 92vw);
-  height: min(90vh, 92vh);
+  height: min(80vh, 92vh);       /* ปรับความสูงตามขนาดหน้าจอ */
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, .25);
+  box-shadow: 0 12px 40px rgba(0,0,0,.25);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 /* ปุ่มปิดมุมขวาบน */
 .overlay__close {
-  position: absolute;
+   position: absolute;
   top: 10px;
   right: 10px;
   line-height: 1;
@@ -147,39 +146,37 @@ td {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
 }
 
 /* พื้นที่เนื้อหา (ยัด <main> ของ viewmember มาไว้ในนี้) */
 .overlay__body {
-  padding: 16px 16px 24px 16px;
-  overflow: auto;
-  /* เลื่อนภายใน panel ได้ */
-  height: 100%;
+   padding: 16px;
+  overflow-y: auto;           /* ให้เลื่อนเนื้อหาภายใน */
+  height: 100%;               /* กำหนดความสูงเต็ม */
+  max-height: calc(100vh - 120px);  /* ให้พอดีกับพื้นที่ */
 }
 
 /* ทำตารางให้ responsive แนวนอนเหมือน managepost */
-.table-scroll {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.table-scroll{
+  max-height: 400px;              /* กำหนดความสูงของตาราง */
+  overflow-y: auto;               /* ทำให้สามารถเลื่อนในแนวตั้งได้ */
+  margin-bottom: 20px;
 }
 
-.table-scroll table {
+.table-scroll table{
   width: 100%;
   border-collapse: collapse;
   background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.table-scroll th {
-  background: #0078D4;
-  color: #fff;
+.table-scroll th{
+  background-color: #0078D4;
+  color: white;
 }
 
-.table-scroll th,
-.table-scroll td {
+.table-scroll th, .table-scroll td{
   padding: 14px;
   text-align: center;
   border-bottom: 1px solid #eee;
