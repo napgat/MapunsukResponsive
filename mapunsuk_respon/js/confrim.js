@@ -14,7 +14,7 @@
         <p class="confirm-msg" id="confirmMsg">คุณแน่ใจหรือไม่?</p>
         <div class="confirm-actions">
           <button type="button" class="btn bg_white" id="confirmCancel">ยกเลิก</button>
-          <button type="button" class="btn cancal"  id="confirmOk">ยืนยัน</button>
+          <button type="button" class="btn"  id="confirmOk">ยืนยัน</button>
         </div>
       </div>
     `;
