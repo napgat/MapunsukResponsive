@@ -24,16 +24,20 @@ main {
   margin: 50px;
   margin-bottom: 400px;
 }
-.layer-1 > .title_summary{
+
+.layer-1>.title_summary {
   margin-bottom: 20px;
 }
-.layer-1 > .summary-boxes{
+
+.layer-1>.summary-boxes {
   display: flex;
   flex-wrap: wrap;
 }
-.layer-2{
+
+.layer-2 {
   margin-top: 10px;
 }
+
 .summary-boxes {
   display: flex;
   gap: 20px;
@@ -101,6 +105,114 @@ td {
   justify-content: end;
 }
 
+/* ===== Overlay: fullscreen ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+}
+
+.overlay[hidden] {
+  display: none;
+}
+
+.overlay__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  backdrop-filter: blur(1px);
+}
+
+.overlay__panel {
+  position: relative;
+  width: min(1100px, 92vw);
+  height: min(90vh, 92vh);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ปุ่มปิดมุมขวาบน */
+.overlay__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  line-height: 1;
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+}
+
+/* พื้นที่เนื้อหา (ยัด <main> ของ viewmember มาไว้ในนี้) */
+.overlay__body {
+  padding: 16px 16px 24px 16px;
+  overflow: auto;
+  /* เลื่อนภายใน panel ได้ */
+  height: 100%;
+}
+
+/* ทำตารางให้ responsive แนวนอนเหมือน managepost */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.table-scroll th {
+  background: #0078D4;
+  color: #fff;
+}
+
+.table-scroll th,
+.table-scroll td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* ช่องหัวเรื่องใน viewmember ที่ดึงมา (จัดให้เว้นระยะนิดหน่อย) */
+.overlay__body .fortitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.overlay__body .member-count {
+  font-weight: 700;
+  color: #333;
+}
+
+/* ปุ่มลบในตาราง */
+.overlay__body .delete-btn {
+  background: #d32f2f;
+  color: #fff;
+  border: 0;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.overlay__body .delete-btn:hover {
+  background: #b71c1c;
+}
+
+
 @media (max-width: 1024px) {
   main {
     background: #fff;
@@ -109,12 +221,28 @@ td {
 }
 
 @media (max-width: 767.99px) {
-  .layer-1{
+  .overlay__panel {
+    width: 96vw;
+    height: 92vh;
+  }
+
+  .overlay__body {
+    padding: 12px;
+  }
+
+  .overlay__body .fortitle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .layer-1 {
     margin: 20px;
   }
-  .content{
+
+  .content {
     padding: 0px;
   }
+
   .layer-2 {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
