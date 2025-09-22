@@ -11,3 +11,6 @@
 9.history page / <br>
 10.manage page / <br>
 11.viewmember btn /<br>
+12.addpost page /<br>
+13.editpost page /<br>
+14.detail page /<br>
