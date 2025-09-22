@@ -106,6 +106,10 @@ main {
     background-color: #E6E6E6;
     padding: 8px 14px;
 }
+.btn.bg_blue{
+    padding: 16px;
+    font-size: 15px;
+}
 
 .showactivity {
     display: grid;
