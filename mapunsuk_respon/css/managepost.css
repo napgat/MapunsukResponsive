@@ -159,7 +159,7 @@ td {
 
 /* ทำตารางให้ responsive แนวนอนเหมือน managepost */
 .table-scroll{
-  max-height: 400px;              /* กำหนดความสูงของตาราง */
+  max-height: calc(80vh - 60px);              /* กำหนดความสูงของตาราง */
   overflow-y: auto;               /* ทำให้สามารถเลื่อนในแนวตั้งได้ */
   margin-bottom: 20px;
 }
