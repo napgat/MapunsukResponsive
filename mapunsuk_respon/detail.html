@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapunsuk</title>
-    <link rel="stylesheet" href="css/profileEdit.css">
+    <link rel="stylesheet" href="css/indexuser.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/detail.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style_global.css">
+    <script src="progress.js"></script>
 </head>
 
 <body>
+    <!-- For Nav before login -->
     <nav>
         <div class="content1" id="navBar">
             <div class="title">
@@ -67,69 +70,130 @@
 
     <main>
         <div class="content">
-            <div class="edit">
-
-                <form class="profile-form" action="">
-                    <!-- รูปโปรไฟล์อยู่ในฟอร์มแล้ว และคลิกได้ -->
-                    <div class="pic" id="avatar" role="button" tabindex="0" aria-label="เปลี่ยนรูปโปรไฟล์">
-                        <img id="avatarImg"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHXi6kWCo1P3qJAuOnEAs6jWS1Dg1BqRkk8Q&s"
-                            alt="รูปโปรไฟล์">
+            <div class="main-layer">
+                <div class="l1">
+                    <img src="https://images.unsplash.com/photo-1751182782142-000e62239d85?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="img">
+                </div>
+                <div class="l2">
+                    <div class="text">
+                        <h2>กิจกรรมทำวีลแชร์เพื่อสัตว์พิการ สัญจร จ.โคราช รุ่น 5</h2>
+                        <p><span class="hightlight">สถานที่:</span> วัดหนองปรู มทส ประตู1 ต.หนองจะบก อ.เมือง
+                            จ.นครราชสีมา </p>
+                        <p><span class="hl-black">เวลาจัดกิจกรรม :</span> 08:30 อาทิตย์ 2 พ.ย. 2568 - 12:30 อาทิตย์ 2
+                            พ.ย. 2568</p>
+                        <p><span class="hl-black">ได้รับชั่วโมงกิจกรรม :</span> <span class="hl-blue">5ชม.</span></p>
+                        <p><span class="hl-black">ประเภทกิจกรรม :</span> อื่นๆ</p>
+                        <p><span class="hl-black">ผู้จัด :</span> นาย นภัทร แสงวัง</p>
+                        <p><span class="hl-black">ติดต่อผู้จัดกิจกรรม :</span> 099 - 2975333</p>
                     </div>
-                    <input type="hidden" name="avatarUrl" id="avatarUrlHidden">
-                    <div>
-                        <h1 class="title">แก้ไขข้อมูลส่วนตัว</h1>
+                    <div class="button-box">
+                        <button class="btn join">เข้าร่วมกิจกรรม</button>
                     </div>
+                </div>
 
-                    <div class="name">
-                        <label for="fname"></label>
-                        <input type="text" id="fname" name="firstname" placeholder="ชื่อ">
-                        <label for="lname"></label>
-                        <input type="text" id="lname" name="lastname" placeholder="นามสกุล">
+                <div class="progress-container">
+                    <div class="progress-label" id="progressText">เปิดรับ 20/50 ตำแหน่ง</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
                     </div>
+                </div>
 
-                    <div class="gender">
-                        <p>เพศ:</p>
-                        <input type="radio" id="male" name="gender" value="MALE">
-                        <label for="male">ชาย</label>
-                        <input type="radio" id="female" name="gender" value="FEMALE">
-                        <label for="female">หญิง</label>
-                    </div>
-
-                    <div class="email"><input type="email" name="email" id="email" placeholder="อีเมล" disabled></div>
-                    <div class="password"><input type="password" name="password" id="password" placeholder="รหัสผ่าน"
-                            disabled></div>
-                    <div class="tel"><input type="tel" name="tel" id="tel" placeholder="เบอร์โทรติดต่อ"></div>
-
-                    <div class="submit">
-                        <button class="btn bg_yellow" type="submit">บันทึกการแก้ไข</button>
-                    </div>
-                </form>
-
+                <div class="l3">
+                    <p><span class="hl-black">รายละเอียดกิจกรรม :</span></p>
+                    <p> Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Culpa assumenda itaque ducimus fugiat eos ea fugit atque at dicta nemo
+                        laudantium fuga, rerum cumque quia in voluptatibus modi? Delectus maxime perferendis tempora
+                        obcaecati minima veritatis magni nesciunt nihil? Delectus minus recusandae rem quia odit minima
+                        officia, illum vel, voluptatem illo totam quisquam unde eos molestias quas atque beatae vero
+                        iure? Consequuntur similique fuga totam esse iusto cumque minus molestiae. Ex placeat error
+                        possimus mollitia commodi eos animi facilis nisi. Fugit facilis ipsum suscipit aut qui deleniti
+                        distinctio ea nam officia dolores! Tempore eaque corporis fuga aspernatur quas, quod facilis
+                        pariatur deleniti quo, iste maiores aliquam. Minima, quaerat laboriosam, iure quisquam at quis
+                        accusamus laborum rerum hic, reiciendis deleniti dignissimos blanditiis mollitia? Culpa deleniti
+                        officia quod illo tenetur mollitia itaque omnis. Ipsam quisquam dignissimos porro ea, quae enim
+                        adipisci libero assumenda ad sint culpa natus fugit nostrum beatae in iusto, quasi numquam
+                        tempora aspernatur perferendis tempore aliquam eius voluptates voluptatum! Nam et tempore ex
+                        odit numquam aliquam, provident, nisi autem cupiditate maxime reprehenderit natus blanditiis eos
+                        asperiores at similique. Excepturi aliquam, facere vero quos fugiat neque tenetur iure fugit
+                        nostrum. Nihil reprehenderit placeat magni, itaque eligendi nam, sunt, quae similique quasi
+                        repellat minus quidem. Totam beatae ipsam mollitia, consequatur, dolores dolor, nobis tempora
+                        quas aliquid possimus a voluptatibus vero explicabo id quis quo vel nam ducimus. Sequi illo
+                        magnam ea provident enim deleniti numquam facere repellat molestias laudantium? Recusandae
+                        magnam soluta, natus doloribus earum saepe, illum nam aut accusamus maiores distinctio tempora
+                        voluptates mollitia suscipit vero, adipisci libero provident sed dignissimos quasi? Cumque
+                        exercitationem dolor nihil hic eligendi molestiae facere cupiditate itaque iusto quasi sit at
+                        tenetur voluptas, accusamus laudantium odit cum fugit id quod. Excepturi, alias. Iste non iusto
+                        a esse. Rem, officia est suscipit nemo reprehenderit maxime ipsa impedit quod tenetur magni!
+                        Iusto aliquam officia quis rem labore eligendi molestiae praesentium aut, provident delectus,
+                        distinctio dicta corporis sint fugit architecto ullam, expedita nostrum repudiandae nobis.
+                        Recusandae, atque doloremque cum possimus debitis inventore temporibus unde ab sequi expedita
+                        pariatur accusamus natus exercitationem autem sint omnis! Mollitia minima, nobis quo officia
+                        ipsam fugiat cupiditate doloremque amet hic aut veritatis, ea nostrum vero dolor. Aliquid harum
+                        deserunt minus molestiae inventore doloribus dolore. Repellat quis porro doloremque, reiciendis
+                        aperiam consectetur adipisci iure consequuntur architecto aspernatur dicta assumenda tempora eos
+                        fugit exercitationem ut autem id earum impedit nemo sunt quae voluptatibus maiores? Corrupti
+                        omnis repudiandae blanditiis excepturi. Aperiam sapiente eius rerum dolores, reprehenderit, aut
+                        excepturi veritatis maxime hic quibusdam sed voluptas mollitia distinctio animi praesentium
+                        libero ipsum delectus natus. Quia, modi delectus laudantium excepturi vitae dolorum at eaque
+                        laborum dolores quaerat in reiciendis doloribus earum accusamus perspiciatis eveniet nisi quae
+                        aliquid sint nihil assumenda dignissimos, voluptas vero! Modi eius, exercitationem iure
+                        molestiae provident impedit fugiat, veritatis ea quo porro facilis deserunt quam nobis. Odit
+                        fugit est error omnis, ut nulla amet nihil incidunt adipisci at placeat, eaque, distinctio vel
+                        tempora ducimus corrupti ipsa possimus. Ab iste vitae nisi ad aspernatur, magnam rem tempore
+                        dignissimos quidem, repellendus nesciunt quos ex ipsum excepturi, labore consectetur! In ab
+                        minus porro harum cupiditate, voluptatem provident, libero rem eveniet facere incidunt quia
+                        nihil dolorem consequuntur nulla, amet officiis et aspernatur labore id recusandae hic saepe?
+                        Numquam, molestias. Est, asperiores numquam voluptatem voluptas saepe facere tempore deserunt
+                        animi exercitationem cumque ex repellendus perferendis quis ad consequatur veniam ipsam quas
+                        reprehenderit laborum, corporis ut placeat? Voluptatibus veritatis similique aspernatur
+                        consectetur molestiae dolore hic? Dolorum veritatis atque rerum repellat iste deserunt corrupti
+                        molestias cum amet fugit omnis officiis eum quae odio dolores quibusdam id labore assumenda
+                        voluptatum optio libero, ratione natus molestiae illo! Tenetur nam repellendus id optio.
+                        Voluptates quisquam ea, velit nulla vero quod corrupti magnam porro suscipit aspernatur, nostrum
+                        eius maiores molestias incidunt perferendis veritatis voluptas ad iusto consequuntur vel maxime.
+                        Sit, cumque neque architecto, suscipit exercitationem voluptatibus magni saepe, hic quaerat quod
+                        pariatur ab blanditiis rerum facilis fugit animi! Magni maxime ab earum? Fugit quis, placeat
+                        voluptatibus minima voluptatum doloremque possimus provident animi quidem repellendus
+                        laudantium, ipsa corrupti minus. Vitae, beatae. Sed aliquam impedit magni aut mollitia nesciunt
+                        ipsam vel laudantium vitae fuga eos quibusdam, est facere adipisci eius placeat tenetur nisi
+                        maiores sapiente. Cupiditate inventore officia, modi possimus necessitatibus quos tenetur fuga
+                        recusandae ducimus quidem perspiciatis officiis consequatur eos. Ut, ducimus totam quas
+                        similique explicabo suscipit magni consequuntur cumque nihil veniam molestiae odio dignissimos
+                        error voluptates corporis facilis placeat modi enim dolores beatae! Officiis, optio mollitia.
+                        Ipsam similique nihil totam nam alias facilis porro dolores, omnis molestias adipisci iste
+                        expedita, sit eum provident accusamus blanditiis reprehenderit fugiat. Aliquam rerum, inventore
+                        qui quam minima neque beatae quod magni ex praesentium blanditiis, maiores vitae, tempore
+                        similique libero consequatur dolores distinctio. Animi aperiam nostrum minus nulla officiis
+                        quos, iure nesciunt veniam facilis iusto tenetur perspiciatis esse omnis optio atque iste ea
+                        architecto ullam nisi fugit similique necessitatibus, quia officia! Nemo voluptatum accusantium,
+                        sed libero dolore, cum consectetur nostrum in similique corporis laudantium incidunt temporibus
+                        facere! Nesciunt sit inventore illum illo atque eius perferendis doloremque voluptate! Nemo
+                        provident perferendis veniam assumenda ad ipsum quaerat omnis accusamus voluptas deserunt quam
+                        tempore perspiciatis quidem eligendi vel laborum iure magnam suscipit, debitis rerum.
+                        Reprehenderit, iusto officiis mollitia illum pariatur veniam earum cum sunt corrupti accusamus
+                        dignissimos, ab, voluptate amet quo distinctio? Quidem, maiores commodi! Blanditiis, officiis
+                        voluptas ipsa repellat non deserunt nostrum quisquam similique maxime vitae minima adipisci
+                        molestias aliquid dolor ipsum enim magni dolores. Vitae, aut inventore amet suscipit commodi
+                        distinctio neque corrupti iste aperiam fugiat, maiores beatae sapiente dolorum! Libero ut
+                        quibusdam, tempora nihil voluptatem molestiae sed sunt iusto minus, corrupti officiis veritatis
+                        adipisci provident excepturi voluptas porro? Doloribus iusto ullam eum tempora porro laudantium
+                        repudiandae reprehenderit explicabo dolor nam deserunt, recusandae saepe qui quaerat illo quam
+                        animi odit et placeat sed optio tenetur voluptatum numquam quasi! Aperiam, illo quod sit dolores
+                        mollitia voluptatum nesciunt eum doloremque eaque fugit itaque maxime vel minus eius eos
+                        possimus, suscipit nihil sapiente asperiores officiis! Voluptates corporis labore eligendi quae
+                        perspiciatis debitis? Quisquam aperiam repellat dolorem sapiente.</p>
+                </div>
+                <div class="l4">
+                    <h4>รูปภาพกิจกรรม</h4>
+                </div>
+                <div class="l5">
+                    <img src="https://plus.unsplash.com/premium_photo-1667861381787-62809f85ce65?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyOXx8fGVufDB8fHx8fA%3D%3D"
+                        alt="img">
+                </div>
             </div>
         </div>
     </main>
-    <!-- Overlay สำหรับใส่ไฟล์รูปใหม่ -->
-    <div class="avatar-overlay" id="avatarOverlay" hidden>
-        <div class="avatar-modal" role="dialog" aria-modal="true" aria-labelledby="avatarTitle">
-            <h3 id="avatarTitle">เปลี่ยนรูปโปรไฟล์</h3>
-            <p class="avatar-hint">เลือกไฟล์จากเครื่องของคุณ </p>
-
-            <img id="avatarPreview" alt="ตัวอย่างรูป" />
-
-            <div class="avatar-input">
-                <input type="file" id="avatarFile" accept="image/*" />
-            </div>
-
-            <p class="avatar-error" id="avatarError" aria-live="polite"></p>
-
-            <div class="avatar-actions">
-                <button type="button" class="btn btn--white" id="avatarCancel">ยกเลิก</button>
-                <button type="button" class="btn bg_blue" id="avatarConfirm">ยืนยัน</button>
-            </div>
-        </div>
-    </div>
-
 
     <footer>
         <div class="content2">
@@ -159,9 +223,9 @@
             </div>
         </div>
     </footer>
-    <script src="js/profileEdit.js"></script>
     <script src="js/nav.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/progress.js"></script>
+
 </body>
 
 </html>
