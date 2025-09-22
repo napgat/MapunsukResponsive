@@ -7,13 +7,14 @@
     <title>Mapunsuk</title>
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/managepost.css">
+    <link rel="stylesheet" href="css/indexuser.css">
+    <link rel="stylesheet" href="css/editpost.css">
     <link rel="stylesheet" href="css/style_global.css">
-    <link rel="stylesheet" href="css/viewmember.css">
+
+
 </head>
 
 <body>
-    <!-- For Nav before login -->
     <nav>
         <div class="content1" id="navBar">
             <div class="title">
@@ -66,63 +67,105 @@
             </div>
     </nav>
 
+
     <main>
         <div class="content">
-            <div class="layer-1">
-                <div class="title_summary">
-                    <h2>จัดการโพสต์กิจกรรมของฉัน</h2>
-                </div>
-                <div class="summary-boxes">
-                    <div class="box orange">โพสต์สมาชิกอื่น<br><br>25</div>
-                    <div class="box green">โพสต์ของฉัน<br><br>1</div>
-                    <div class="box blue">โพสต์ทั้งหมด<br><br>26</div>
-                </div>
-                <div class="forpost"><a href="addpost.html" class="btn bg_yellow">เพิ่มโพสต์</a></div>
-                <div class="layer-2">
-                    <table>
-                        <thead>
-                            <th class="headtable" colspan="5">รายการจิตอาสาที่ฉันสร้าง</th>
-                            <tr>
-                                <th>วันที่สร้าง</th>
-                                <th>งานอาสา</th>
-                                <th>จำนวนรับ</th>
-                                <th>ดูสมาชิก</th>
-                                <th>แก้ไขโพสต์</th>
-                                <th>ลบโพสต์</th>
-                                <th>สถานะรับสมัคร</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>09/พ.ค./2567</td>
-                                <td><a href="#">กิจกรรมการเรียนรู้เรื่อง.......</a></td>
-                                <td>0 / 50 คน</td>
-                                <td><a class="btn view-members" data-href="viewmember.html">ดูสมาชิก</a></td>
-                                <td><a href="editpost.html" class="btn bg_blue">แก้ไขโพสต์</a></td>
-                                <td><a class="btn cancal" data-confirm="คุณต้องการลบโพสต์ที่คุณสร้าง ใช่ไหม?"
-                                        data-confirm-title="ยืนยันการยกเลิก" data-ok-text="ยืนยัน"
-                                        data-cancel-text="ปิด">ลบโพสต์</a></td>
-                                <td><a class="btn join">เปิดรับสมัคร</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <!-- Overlay for View Member -->
-        <div id="memberOverlay" class="overlay" hidden>
-            <div class="overlay__backdrop" data-close></div>
-            <div class="overlay__panel" role="dialog" aria-modal="true" aria-labelledby="ov-title">
-                <button class="overlay__close btn bg_white" type="button" aria-label="ปิด" data-close>x</button>
-                <div id="overlay-body" class="overlay-body">
-                    <!-- เนื้อหาของสมาชิกจะถูกโหลดที่นี่ -->
-                </div>
-            </div>
-        </div>
+            <div class="container">
 
+                <h2>แก้ไขโพสต์กิจกรรม</h2>
+
+                <!-- <div class="img">
+                    <img src="https://images.unsplash.com/photo-1757252800867-2e78e08a6d53?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D"
+                        alt="">
+                </div> -->
+                <div class="addpost-image-container">
+                    <img src="https://images.unsplash.com/photo-1757252800867-2e78e08a6d53?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D"
+                        class="addpost-image" alt="กิจกรรม">
+                    <button class="edit-button" aria-label="แก้ไขภาพ">✎</button>
+                </div>
+                <div class="activity_img-overlay" id="activity_imgOverlay" hidden>
+                    <div class="activity_img-modal" role="dialog" aria-modal="true" aria-labelledby="activity_imgTitle">
+                        <h3 id="activity_imgTitle">เลือกภาพกิจกรรม</h3>
+                        <p class="activity_img-hint">เลือกไฟล์รูปภาพจากเครื่องของคุณ</p>
+
+                        <div class="activity_img-input">
+                            <input type="file" id="activity_imgFile" accept="image/*" />
+                        </div>
+
+                        <p class="activity_img-error" id="activity_imgError" aria-live="polite"></p>
+
+                        <div class="activity_img-actions">
+                            <button type="button" class="btn" id="activity_imgCancel">ยกเลิก</button>
+                            <button type="button" class="btn bg_blue" id="activity_imgConfirm">ยืนยัน</button>
+                        </div>
+                    </div>
+                </div>
+
+                <form>
+                    <div>
+                        <label>ชื่อกิจกรรมจิตอาสา</label>
+                        <input type="text" name="activityName">
+                    </div>
+
+                    <div>
+                        <label>จำนวนผู้งานเข้าร่วม</label>
+                        <input type="number" name="participantCount" min="1" value="1">
+                    </div>
+
+                    <div class="full-width">
+                        <label>สถานที่จัดกิจกรรมจิตอาสา</label>
+                        <input type="text" name="location">
+                    </div>
+
+                    <div>
+                        <label>ประเภทกิจกรรม</label>
+                        <select name="activityType">
+                            <option value="">-- เลือกประเภท --</option>
+                            <option value="สิ่งแวดล้อม">สิ่งแวดล้อม</option>
+                            <option value="การศึกษา">การศึกษา</option>
+                            <option value="ชุมชน">ชุมชน</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>วัน / เวลาเริ่มต้น</label>
+                        <div class="datetime-wrapper">
+                            <input type="date" name="startDate" class="start-date">
+                            <input type="time" name="startTime" class="start-time">
+                        </div>
+                    </div>
+                    <div>
+                        <label>วัน / เวลาสิ้นสุด</label>
+                        <div class="datetime-wrapper">
+                            <input type="date" name="endDate" class="end-date">
+                            <input type="time" name="endTime" class="end-time">
+                        </div>
+                    </div>
+
+                    <div class="full-width">
+                        <label>รายละเอียดกิจกรรม</label>
+                        <textarea name="details"></textarea>
+                    </div>
+
+                    <div class="full-width">
+                        <label>รูปภาพกิจกรรม</label>
+                        <input type="file" name="image">
+                    </div>
+
+                    <div class="full-width">
+                        <label>เวลาปิดโพสต์กิจกรรม</label>
+                        <div class="datetime-wrapper">
+                            <input type="date" name="closeDate" class="close-date">
+                            <input type="time" name="closeTime" class="close-time">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">บันทึกโพสต์กิจกรรม</button>
+                </form>
+            </div>
     </main>
 
-    <footer>
+   <footer>
         <div class="content2">
             <div class="ti2">
                 <h2>
@@ -151,8 +194,7 @@
         </div>
     </footer>
     <script src="js/nav.js"></script>
-    <script src="js/fecth_viewmember.js"></script>
-    <script src="js/confrim.js"></script>
+<script src="js/post_choose_file.js"></script>
 </body>
 
 </html>
