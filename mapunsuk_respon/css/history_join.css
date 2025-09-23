@@ -93,9 +93,14 @@ th {
   color: white;
 }
 
-td.status {
+td.status_activity.wait {
   color: #0078D4;
   font-weight: bold;
+}
+td.status_activity.done {
+  color: #34cc4e;
+  font-weight: bold;
+
 }
 
 
