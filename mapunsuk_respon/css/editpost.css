@@ -152,12 +152,13 @@ form textarea {
   right: 10px;
   background-color: #FFCB1F;
   color: white;
-  padding: 12px;
+  padding: 9px;
   border-radius: 50%;
   font-size: 30px;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-width: 0px;
+  width: 57px;
 }
 
 .addpost-image-container .edit-button:hover {
@@ -168,6 +169,7 @@ form textarea {
 .datetime-wrapper {
   display: flex;
   gap: 10px;
+  align-items: center;
   /* เพิ่มช่องว่างระหว่าง date และ time */
 }
 
@@ -202,20 +204,6 @@ form textarea {
   object-fit: cover; /* ให้เต็มกรอบ */
   object-position: center; /* ให้อยู่กลาง */
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* เงาเล็กน้อย */
-}
-
-.addpost-image-container .edit-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #FFCB1F;
-  color: white;
-  padding: 12px;
-  border-radius: 50%;
-  font-size: 30px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-width: 0px;
 }
 
 .addpost-image-container .edit-button:hover {
@@ -307,7 +295,7 @@ form textarea {
   .datetime-wrapper {
     flex-direction: column;
     /* เปลี่ยนให้เรียงแนวตั้ง */
-    align-items: stretch;
+    align-items: center;
     /* ทำให้เต็ม */
   }
  form {

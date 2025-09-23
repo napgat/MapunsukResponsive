@@ -118,7 +118,7 @@
                     </div>
 
                     <div>
-                        <label>จำนวนผู้งานเข้าร่วม</label>
+                        <label>กำหนดจำนวนผู้เข้าร่วม</label>
                         <input type="number" name="participantCount" min="1" value="1">
                     </div>
 
@@ -138,16 +138,18 @@
                     </div>
 
                     <div>
-                        <label>วัน / เวลาเริ่มต้น</label>
+                       <label>วันที่จัดกิจกรรม</label>
                         <div class="datetime-wrapper">
                             <input type="date" name="startDate" class="start-date">
-                            <input type="time" name="startTime" class="start-time">
+                            <p>ถึง</p>
+                            <input type="date" name="endDate" class="end-date">
                         </div>
                     </div>
                     <div>
-                        <label>วัน / เวลาสิ้นสุด</label>
+                       <label>ระยะเวลากิจกรรม</label>
                         <div class="datetime-wrapper">
-                            <input type="date" name="endDate" class="end-date">
+                            <input type="time" name="startTime" class="start-time">
+                            <p>ถึง</p>
                             <input type="time" name="endTime" class="end-time">
                         </div>
                     </div>
